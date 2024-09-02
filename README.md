@@ -1,6 +1,6 @@
 # 2a_Stop_and_Wait_Protocol
-### Name : T Mounish
-### Reg No : 212223240098
+### Name : shyam R
+### Reg No : 212223040200
 ## AIM 
 To write a python program to perform stop and wait protocol
 ## ALGORITHM
