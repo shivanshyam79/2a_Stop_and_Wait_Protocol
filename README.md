@@ -1,6 +1,6 @@
 # 2a_Stop_and_Wait_Protocol
-### Name : shyam R
-### Reg No : 212223040200
+## Name : shyam R
+## REG NO:212223040200
 ## AIM 
 To write a python program to perform stop and wait protocol
 ## ALGORITHM
@@ -11,37 +11,38 @@ To write a python program to perform stop and wait protocol
 5. If your frames reach the server it will send ACK signal to client
 6. Stop the Program
 ## PROGRAM
-### Client :
-```python
+CLIENT:
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
 s.listen(5)
 c,addr=s.accept()
 while True:
-i=input("Enter a data: ")
-c.send(i.encode())
-ack=c.recv(1024).decode()
-if ack:
-print(ack)
-continue
-else:
-c.close()
-break
+    i=input("Enter a data: ")
+    c.send(i.encode())
+    ack=c.recv(1024).decode()
+    if ack:
+        print(ack)
+        continue
+    else:
+        c.close()
+        break
 ```
-### Server : 
-```python
+SERVER:
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 while True:
-print(s.recv(1024).decode())
-s.send("Acknowledgement Recived".encode())
-
+    print(s.recv(1024).decode())
+    s.send("Acknowledgement Recived".encode())
 ```
 ## OUTPUT
-![screenshot](https://github.com/user-attachments/assets/08731948-2e84-4b94-8ecc-2af7fe0994d6)
-![screenshot2](https://github.com/user-attachments/assets/516318ad-bdca-4468-8fb7-72273b5b3662)
+Client
+![CN client1](https://github.com/user-attachments/assets/13853c7b-c721-4adf-a78a-59667a8d3830)
+Server
+![CN server1](https://github.com/user-attachments/assets/f37eb405-c784-4d0e-991d-60104c088a5d)
 
 ## RESULT
 Thus, python program to perform stop and wait protocol was successfully executed.
